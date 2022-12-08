@@ -102,6 +102,7 @@ void loop()
 {
    float heading = Compass.GetHeadingDegrees();
    
+   // we want to add ~4 degrees
    Serial.print("Heading: \t");
    Serial.println( heading );   
    delay(1000);
