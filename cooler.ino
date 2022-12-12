@@ -23,6 +23,7 @@ void driveForward();
 void driveReverse();
 void turnLeft();
 void turnRight();
+void stop();
 
 /*
 //calculate needed turning angle 
@@ -67,19 +68,29 @@ void setup() {
   // get the motors going
   analogWrite(enA, 255);
   analogWrite(enB, 255);
+  Serial.begin(115200); // initialize serial for control & debugging
+  stop();
 }
 
 // main loop
 void loop() {
 
-  driveForward();
-  delay(10000);
-  turnLeft();
-  delay(10000);
-  turnRight();
-  delay(10000);
-  driveReverse();
-  delay(10000);
+  char in_char = Serial.read();
+		if (in_char=='q' || in_char=='l' || in_char=='c'){ // inputs for left turns
+			turnLeft();
+		}
+		else if(in_char=='e' || in_char=='z' || in_char=='r'){ // inputs for right turns
+			turnRight();
+		}
+		else if(in_char=='b'){ // backwards
+			driveReverse();
+		}
+		else if(in_char=='f'){ // forwards
+			driveForward();
+		}
+		else if(in_char=='s'){ // stops
+		stop();
+		}
   /*
   if(input == 'f'){
     driveForward();
@@ -151,6 +162,13 @@ void turnRight() {
   digitalWrite(in1, LOW);
   digitalWrite(in2, HIGH);
   digitalWrite(in3, HIGH);
+  digitalWrite(in4, LOW);
+}
+
+void stop(){
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, LOW);
+  digitalWrite(in3, LOW);
   digitalWrite(in4, LOW);
 }
 /*
