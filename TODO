@@ -1,0 +1,11 @@
+Notes on current implementation can be found in the README.md
+
+Most Urgent Issues:
+ - Weight
+ - [] Lighter Back Wheel (currently 8" Caster Wheel)
+ - [] Lighter Frame (currently wooden)
+ - Functionality
+ - [] New Axis Module or Calibration (currently HMC5883L)
+ - [] New Motor (currently 12v 12rpm DC Worm Gear 70kg.cm)
+ - [] Rework Bluetooth Code and Custom App
+ - [] Antenna for GPS Module (currently  NEO-6M GT-U7 without antenna)
