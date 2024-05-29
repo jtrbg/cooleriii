@@ -3,13 +3,16 @@
 An application that is used to control the CoolerCoolerCooler
 
 ## Current Issues
-1. Weight
-   The weight of the current prototype is too heavy for the current motor (even without a loaded cooler). The motor and/or overall weight of the build needs to be optimized.
-2. Precision and Strength of Printed Parts
-   While the printed motor hub connecting the wheel and the motors originally broke from the stress(orig_motor_hub.stl) the new design does not break, but the mounting holes bend causing tilt in the wheels. (currently broken as the device was dropped)
-3. Functionality
-   a. Axis module: Did not provide accurate readings of direction even when tilt was disregarded(level surface)
-   b. Bluetooth and Application: While the custom application could read from module, it would not 'write' proper instructions to the device. With that, we were able to determine the location of both the phone and the device, but unable to properly communicate/decode instructions from the app.
+1. **Weight**
+   - The weight of the current prototype is too heavy for the current motor (even without a loaded cooler). The motor and/or overall weight of the build needs to be optimized.
+
+2. **Precision and Strength of Printed Parts**
+   - While the printed motor hub connecting the wheel and the motors originally broke from the stress (`orig_motor_hub.stl`), the new design does not break, but the mounting holes bend causing tilt in the wheels (`new_motor_hub.stl`).
+
+3. **Functionality**
+   - **Axis Module:** Did not provide accurate readings of direction even when tilt was disregarded (level surface).
+   - **Bluetooth and Application:** While the custom application could read from the module, it would not 'write' proper instructions to the device. With that, we were able to determine the location of both the phone and the device, but unable to properly communicate/decode instructions from the app.
+
 
 ## GUIDE TO USE
 ## Main Application
